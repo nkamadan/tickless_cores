@@ -3,11 +3,11 @@
 ## Problem
 
 * If the nanoseconds are important in your program, if the OS jitter bothers you, or if you encounter unexpected huge spikes like in the image below while benchmarking, this repository might be for you. 
-![Huge Spikes in Memory Access Latencies (Multiple different rows in the same bank)](spikes.png)
+![Huge Spikes in Memory Access Latencies (Multiple different rows in the same bank)](https://github.com/nkamadan/tickless_cores/blob/main/images/spikes.png)
 
 * The figure 2 shows how the timer ticks look like while running the memory access latency benchmark (from kernel tracing interface). These timer ticks' behaviour changes in "IDLE" CPUs to make them more energy efficient. So, this image does not need to be consistent over different systems/kernels/programs etc. 
 
-![Timer Ticks on CPU 2 That the Benchmark is Run](timer_ticks.png)
+![Timer Ticks on CPU 2 That the Benchmark is Run](https://github.com/nkamadan/tickless_cores/blob/main/images/timer_ticks.png)
  
 * This line is from the trace collected while running the benchmark pinned on a specific core: " <...>-4523    [007] d..2.  5941.572756: sched_switch: prev_comm=tester prev_pid=4523 prev_prio=100 prev_state=R+ ==> next_comm=kworker/7:1H next_pid=522 next_prio=100 "
 * In a non-adaptive ticks CPU trace, it would be filled with a lot of jitter from OS such as ^^ for its bookkeeping, stat collection and such..  
