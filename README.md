@@ -10,7 +10,9 @@
 ![Timer Ticks on CPU 2 That the Benchmark is Run](https://github.com/nkamadan/tickless_cores/blob/main/images/timer_ticks.png)
  
 * This line is from the trace collected while running the benchmark pinned on a specific core: 
+
     <...>-4523    [007] d..2.  5941.572756: sched_switch: prev_comm=tester prev_pid=4523 prev_prio=100 prev_state=R+ ==> next_comm=kworker/7:1H next_pid=522 next_prio=100
+
 * In a non-adaptive ticks CPU trace, it would be filled with a lot of jitter from OS such as ^^ for its bookkeeping, stat collection and such..  
 
 ## Solution
