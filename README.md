@@ -2,7 +2,7 @@
 
 ## Problem
 
-* If the nanoseconds are important in your program, if the OS jitter bothers you, or if you encounter unexpected huge spikes like in the image below while benchmarking, this repository might be for you. 
+* If the nanoseconds are important in your program, if the OS jitter bothers you, or if you encounter unexpected huge spikes like in the image below while benchmarking, you might consider running your program in an adaptive ticks CPU. 
 ![Huge Spikes in Memory Access Latencies (Multiple different rows in the same bank)](https://github.com/nkamadan/tickless_cores/blob/main/images/spikes.png)
 
 * The figure 2 shows how the timer ticks look like while running the memory access latency benchmark (from kernel tracing interface). These timer ticks' behaviour changes in "IDLE" CPUs to make them more energy efficient. So, this image does not need to be consistent over different systems/kernels/programs etc. 
