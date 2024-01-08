@@ -40,3 +40,9 @@
       <idle>-0       [007] d..2.   250.179248: sched_switch: prev_comm=swapper/7 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=timer_test next_pid=2456 next_prio=120
       timer_test-2456    [007] d.h..   260.149678: reschedule_entry: vector=253
       timer_test-2456    [007] d.h..   260.149678: reschedule_exit: vector=253
+
+## References
+
+1. https://www.kernel.org/doc/Documentation/timers/NO_HZ.txt
+2. git://git.kernel.org/pub/scm/linux/kernel/git/frederic/dynticks-testing.git
+3. https://www.suse.com/c/cpu-isolation-nohz_full-troubleshooting-tsc-clocksource-by-suse-labs-part-6/
