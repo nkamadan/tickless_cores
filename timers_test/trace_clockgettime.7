@@ -1,0 +1,23 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 12622/12622   #P:40
+#
+#                                _-----=> irqs-off/BH-disabled
+#                               / _----=> need-resched
+#                              | / _---=> hardirq/softirq
+#                              || / _--=> preempt-depth
+#                              ||| / _-=> migrate-disable
+#                              |||| /     delay
+#           TASK-PID     CPU#  |||||  TIMESTAMP  FUNCTION
+#              | |         |   |||||     |         |
+          <idle>-0       [007] d..2. 249996.191029: sched_switch: prev_comm=swapper/7 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=timer_test next_pid=91771 next_prio=120
+      timer_test-91771   [007] d.h.. 249997.014964: call_function_single_entry: vector=251
+      timer_test-91771   [007] dNh.. 249997.014967: call_function_single_exit: vector=251
+      timer_test-91771   [007] dNh.. 249997.014969: irq_work_entry: vector=246
+      timer_test-91771   [007] dNh.. 249997.014970: irq_work_exit: vector=246
+      timer_test-91771   [007] d..2. 249997.014973: sched_switch: prev_comm=timer_test prev_pid=91771 prev_prio=120 prev_state=R ==> next_comm=kworker/7:1 next_pid=326 next_prio=120
+     kworker/7:1-326     [007] d..2. 249997.014979: sched_switch: prev_comm=kworker/7:1 prev_pid=326 prev_prio=120 prev_state=I ==> next_comm=timer_test next_pid=91771 next_prio=120
+      timer_test-91771   [007] d.h.. 249997.018949: local_timer_entry: vector=236
+      timer_test-91771   [007] d.h.. 249997.018951: local_timer_exit: vector=236
+      timer_test-91771   [007] d.h.. 250006.142092: reschedule_entry: vector=253
+      timer_test-91771   [007] d.h.. 250006.142093: reschedule_exit: vector=253

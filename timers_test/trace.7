@@ -1,0 +1,15 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 10931/10931   #P:40
+#
+#                                _-----=> irqs-off/BH-disabled
+#                               / _----=> need-resched
+#                              | / _---=> hardirq/softirq
+#                              || / _--=> preempt-depth
+#                              ||| / _-=> migrate-disable
+#                              |||| /     delay
+#           TASK-PID     CPU#  |||||  TIMESTAMP  FUNCTION
+#              | |         |   |||||     |         |
+          <idle>-0       [007] d..2.   995.473890: sched_switch: prev_comm=swapper/7 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=timer_test next_pid=2900 next_prio=120
+      timer_test-2900    [007] d.h..  1005.432511: reschedule_entry: vector=253
+      timer_test-2900    [007] d.h..  1005.432512: reschedule_exit: vector=253
