@@ -27,7 +27,7 @@
 
 * The sched_setaffinity() API, the taskset tool, or interfaces like cpusets can be used to pin a task that is to be isolated to an isolated CPU.
 
-* Hardware interrupts do not have an affinity (except for timer and some specific interrupts). Therefore, they can jump to our isolated CPU. The nohz_full boot time parameter does not resolve this, so we need to handle it ourselves as a separate step. We must clear all interrupts from our isolated CPUs using /proc/irq/$IRQ/smp_affinity.
+3. Hardware interrupts do not have an affinity (except for timer and some specific interrupts). Therefore, they can jump to our isolated CPU. The nohz_full boot time parameter does not resolve this, so we need to handle it ourselves as a separate step. We must clear all interrupts from our isolated CPUs using /proc/irq/$IRQ/smp_affinity.
 
 ## Results
 
